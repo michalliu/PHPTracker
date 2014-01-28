@@ -8,3 +8,6 @@ For examples see http://php-tracker.org/
 ### Warning!
 
 The HEAD contains major refactor of the library which has many BC breakign changes. The current documentation refers to the latest tagged stable version (v0.3). Please keep using it before 0.4 stable is released.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tcz/phptracker/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
