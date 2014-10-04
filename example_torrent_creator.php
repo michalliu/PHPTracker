@@ -16,14 +16,14 @@ $config = new PHPTracker_Config_Simple( array(
     'persistence' => new PHPTracker_Persistence_Mysql(
         new PHPTracker_Config_Simple( array(
             'db_host'       => 'localhost',
-            'db_user'       => 'misc',
-            'db_password'   => 'misc',
-            'db_name'       => 'misc',
+            'db_user'       => 'bittracker',
+            'db_password'   => 'bitbit',
+            'db_name'       => 'bittracker',
         ) )
     ),
     // List of public announce URLs on your server.
     'announce'  => array(
-        'http://php-tracker.dev/example_announce.php',
+        'http://54.201.118.113/tracker/example_announce.php',
     ),
 ) );
 
@@ -34,11 +34,11 @@ $core = new PHPTracker_Core( $config );
 // This is VERY inefficient to do! SAVE the .torrent file on your server and
 // serve the saved copy!
 header( 'Content-Type: application/x-bittorrent' );
-header( 'Content-Disposition: attachment; filename="test.torrent"' );
+header( 'Content-Disposition: attachment; filename="trakcer_server.torrent"' );
 
 // The first parameters is a path (can be absolute) of the file,
 // the second is the piece size in bytes.
-echo $core->createTorrent( '../test.avi', 524288 );
+echo $core->createTorrent( '/home/ubuntu/share/tracker.tgz', 524288 );
 
 // You can also specify basename for the file in the torrent (if different from physical):
 // echo $core->createTorrent( '../test.avi', 524288, 'puderzucker.avi' );

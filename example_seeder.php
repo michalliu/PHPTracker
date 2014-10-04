@@ -16,9 +16,9 @@ PHPTracker_Autoloader::register();
 $persistence = new PHPTracker_Persistence_Mysql(
     new PHPTracker_Config_Simple( array(
         'db_host'       => 'localhost',
-        'db_user'       => 'misc',
-        'db_password'   => 'misc',
-        'db_name'       => 'misc',
+        'db_user'       => 'bittracker',
+        'db_password'   => 'bitbit',
+        'db_name'       => 'bittracker',
     ) )
 );
 
@@ -27,11 +27,11 @@ $peer = new PHPTracker_Seeder_Peer(
     new PHPTracker_Config_Simple( array(
         'persistence'               => $persistence,
         // PUBLIC address of the seeder server. This will be used for announcements (ie. sent to the clients).
-        'seeder_address'            => '192.168.2.123',
+        'seeder_address'            => '54.201.118.113',
         // Don't forget the firewall!
         'seeder_port'               => 6881,
         // Optional parameter for IP to open socket on if differs from external.
-        //'seeder_internal_address'   => '192.168.2.123',
+        'seeder_internal_address'   => '172.31.5.67',
         // Number telling how many processes should be forked to listen to incoming connections.
         'peer_forks'                => 10,
         // If specified, gives a number of outsider seeders to make self-seeding stop.

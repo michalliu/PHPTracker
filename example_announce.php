@@ -16,9 +16,9 @@ $config = new PHPTracker_Config_Simple( array(
     'persistence' => new PHPTracker_Persistence_Mysql(
         new PHPTracker_Config_Simple( array(
             'db_host'       => 'localhost',
-            'db_user'       => 'misc',
-            'db_password'   => 'misc',
-            'db_name'       => 'misc',
+            'db_user'       => 'bittracker',
+            'db_password'   => 'bitbit',
+            'db_name'       => 'bittracker',
         ) )
     ),
     // The IP address of the connecting client.
