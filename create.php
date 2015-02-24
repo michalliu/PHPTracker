@@ -23,7 +23,10 @@ $config = new PHPTracker_Config_Simple( array(
     ),
     // List of public announce URLs on your server.
     'announce'  => array(
-        'http://54.201.118.113/tracker/example_announce.php',
+        'http://bt.cubian.org/announce.php',
+        'http://bt.cubian.org:8307/announce.php',
+        'http://bt-cn.cubian.org/announce.php',
+        'http://bt-cn.cubian.org:8307/announce.php',
     ),
 ) );
 
@@ -34,11 +37,21 @@ $core = new PHPTracker_Core( $config );
 // This is VERY inefficient to do! SAVE the .torrent file on your server and
 // serve the saved copy!
 header( 'Content-Type: application/x-bittorrent' );
-header( 'Content-Disposition: attachment; filename="trakcer_server.torrent"' );
+header( 'Content-Disposition: attachment; filename="Cubian.torrent"' );
 
 // The first parameters is a path (can be absolute) of the file,
 // the second is the piece size in bytes.
-echo $core->createTorrent( '/home/ubuntu/share/tracker.tgz', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano-x1-a10-hdmi.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano+headless-x1-a10.img.7z', 524288 );
+//echo $core->createTorrent( '/home/ubuntu/share/Cubian-desktop-x1-a10-hdmi.img.7z', 524288 );
+//echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano-x1-a20-hdmi.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano+headless-x1-a20.img.7z', 524288 );
+//echo $core->createTorrent( '/home/ubuntu/share/Cubian-desktop-x1-a20-cubietruck-hdmi.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-desktop-x1-a20-cubietruck-vga.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-desktop-x1-a20-hdmi.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano+headless-x1-a20-cubietruck.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano-x1-a20-cubietruck-hdmi.img.7z', 524288 );
+// echo $core->createTorrent( '/home/ubuntu/share/Cubian-nano-x1-a20-cubietruck-vga.img.7z', 524288 );
 
 // You can also specify basename for the file in the torrent (if different from physical):
 // echo $core->createTorrent( '../test.avi', 524288, 'puderzucker.avi' );
