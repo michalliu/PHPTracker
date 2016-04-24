@@ -27,11 +27,11 @@ $peer = new PHPTracker_Seeder_Peer(
     new PHPTracker_Config_Simple( array(
         'persistence'               => $persistence,
         // PUBLIC address of the seeder server. This will be used for announcements (ie. sent to the clients).
-        'seeder_address'            => '54.201.118.113',
+        'seeder_address'            => '104.236.147.121',
         // Don't forget the firewall!
         'seeder_port'               => 6881,
         // Optional parameter for IP to open socket on if differs from external.
-        'seeder_internal_address'   => '172.31.5.67',
+        'seeder_internal_address'   => '172.17.0.26',
         // Number telling how many processes should be forked to listen to incoming connections.
         'peer_forks'                => 10,
         // If specified, gives a number of outsider seeders to make self-seeding stop.
